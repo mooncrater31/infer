@@ -22,26 +22,18 @@ title: "Jammu And Kashmir GIFs"
  
   <script>
     $( function() {
-    		$( "#slider" ).slider({
-  				max: 88
-			});
-    
         var handle = $( "#custom-handle" );
         
         $( "#slider" ).slider({
-        
         create: function() {
+        handle.text(1911+'') ;
+
         
-        var slide_number = Math.floor(parseInt($(this).slider("value"))/5.55555) ;
-        
-        $("#para").text(slide_number) ;
-        handle.text( $( this ).slider( (Number("value")+1900)+'' ) );
-        $('.carousel').carousel(slide_number) ;
         },
       slide: function( event, ui ) {
       	var curr_val = parseInt(ui.value) ;
-      	console.log("running") ;
-        $("#para").text(ui.value) ;
+      	
+        
         handle.text( (Number    (ui.value)+1911)+'' );
         
         if(curr_val<5)
@@ -81,7 +73,8 @@ title: "Jammu And Kashmir GIFs"
         else if(curr_val<90)
         	$('.carousel').carousel(17) ;
         	
-        }
+        },
+        max: 88,
         });
     } );
     </script>    
