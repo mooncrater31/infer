@@ -30,6 +30,9 @@ title: "Jammu And Kashmir GIFs"
 
         
         },
+        slide: function(event,ui){
+        handle.text((Number(ui.value)+1911)+'') ;
+      },
       change: function( event, ui ) {
       	var curr_val = parseInt(ui.value) ;
       	console.log('Changing to :'+ui.value) ;
